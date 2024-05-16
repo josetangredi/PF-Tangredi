@@ -1,0 +1,46 @@
+/*general*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: monospace; /*tipo de letra*/
+}
+
+header {
+  padding-top: 80px;
+}
+.topbar-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #ffffffaa;
+}
+
+.menu {
+  padding: 20px;
+  list-style: none;
+  display: flex;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.menu link {
+  display: inline-block;
+}
+.menu a {
+  padding: 20px;
+  margin: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.link:hover {
+  font-weight: bold;
+}

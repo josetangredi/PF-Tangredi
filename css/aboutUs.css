@@ -1,0 +1,71 @@
+/*pagina TRES equipo*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.titulo2 {
+  font-family: "futurist";
+}
+
+.imagen1 {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.imagen2 {
+  width: 200px; /*ancho*/
+  height: 200px; /*alto*/
+  object-fit: cover;
+}
+
+.overflow {
+  width: 300px; /*ancho*/
+  margin: 0 auto;
+}
+
+.overflow p {
+  font-size: 20px; /*tama letra*/
+  text-align: center;
+  line-height: 1.5; /*separacion texto*/
+}
+
+.parrafo {
+  text-align: center;
+  font-size: 15px;
+}
+
+.background-section {
+  background-image: url(../Multimedia/IMG_3.jpg); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el fondo */
+  background-position: 0%; /* Centra la imagen */
+  height: 100vh; /* Altura de la sección con fondo de imagen */
+  width: 100vw;
+}
+
+img {
+  width: 250px;
+  height: 300px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px;
+  gap: 15px;
+  padding: 80px;
+}
+
+.grid p {
+  padding: 1rem;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.flex p {
+  display: flex;
+  justify-content: left;
+  font-size: 100px;
+}

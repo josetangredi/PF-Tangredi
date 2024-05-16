@@ -1,0 +1,94 @@
+
+/*pagina UNO, titulo principal*/
+.tituloPrincipal{
+    font-size: 120px;
+    color: rgb(41, 40, 40);
+    text-align: center;
+    font-family:monospace;
+    text-transform: uppercase;
+}
+
+
+ /*pagina DOS proyecto*/
+
+ .titulo1Pag2{
+    text-transform: uppercase;
+    font-family: monospace;
+ }
+
+ .titulo2Pag2{
+    font-family:monospace;
+ }
+
+ .titulo3Pag2{
+    font-family:monospace;
+ }
+
+ img{
+    width: 150px;
+    height: min-content;
+    justify-content: space-between;
+    display:inline-block;
+ }
+
+
+ /*pagina TRES equipo*/
+ 
+.titulo1Pag3{
+    font-family:monospace;
+    text-transform: uppercase;
+    margin-left: 50px; /*margen izquierdo*/
+}
+.titulo2Pag3{
+    font-family:monospace;
+    text-transform: uppercase;/* texto mayuscula*/
+}
+
+.background-section {
+    background-image: url(../Multimedia/bakgroundma.jpg); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el fondo */
+    background-position:0%; /* Centra la imagen */
+    height: 350px; /* Altura de la sección con fondo de imagen */
+}
+
+.content {
+    display: inline-block;
+}
+
+.imagen1{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+}
+
+.imagen2{
+    width: 200px; /*ancho*/
+    height: 200px; /*alto*/
+    object-fit: cover;
+}
+
+.overflow{
+    width:300px; /*ancho*/
+    margin:0 auto;
+}
+
+.overflow p{
+    font-size: 20px; /*tama letra*/
+    text-align: left; 
+    line-height: 1.5; /*separacion texto*/
+}
+
+.parrafo {
+    text-align: center;
+}
+
+/*general*/
+
+p{
+    font-family:monospace; /*tipo de letra*/
+}
+
+
+
+
