@@ -48,8 +48,8 @@ header {
 .grid-container-img {
   display: grid;
   grid-template-columns: 2fr 2fr;
-  grid-template-rows: 300px 300px;
-  row-gap: 15px;
+  grid-template-rows: 300px;
+  row-gap: 50px;
   column-gap: 10px;
   column-gap: 30px;
 }
@@ -80,6 +80,10 @@ img {
   width: 300px;
   height: 300px;
 }
+
+img:hover {
+  border: solid white 3px;
+}
 .width {
   width: 300px;
 }
@@ -88,4 +92,50 @@ img {
   font-size: 15px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.section__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image__link {
+  width: 300px;
+  height: 300px;
+}
+
+.overlay {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container-img {
+    grid-template-columns: 2fr;
+    grid-template-rows: 300px 300px;
+    padding: 0 50px;
+  }
+
+  .item-2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .item-4 {
+    grid-column: 1;
+    grid-row: 2;
+  }
 }

@@ -44,3 +44,12 @@ header {
 .link:hover {
   font-weight: bold;
 }
+
+.section {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.section__grey {
+  background-color: #f2f2f0;
+}

@@ -27,3 +27,10 @@ main {
 img:hover {
   border: solid white 3px;
 }
+
+.proyecto2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

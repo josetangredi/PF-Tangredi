@@ -61,3 +61,12 @@ h1 {
 .modern__form button[type="submit"]:focus {
   outline: none;
 }
+
+@media screen and (max-width: 600px) {
+  .modern__form {
+    max-width: 200px;
+  }
+  h1 {
+    font-size: 16px; /* Tamaño del título */
+  }
+}

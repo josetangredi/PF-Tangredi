@@ -5,10 +5,6 @@
   box-sizing: border-box;
 }
 
-.titulo2 {
-  font-family: "futurist";
-}
-
 .imagen1 {
   width: 200px;
   height: 200px;
@@ -30,24 +26,22 @@
   font-size: 20px; /*tama letra*/
   text-align: center;
   line-height: 1.5; /*separacion texto*/
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  color: grey;
 }
 
-.parrafo {
+.parrafo p {
   text-align: center;
-  font-size: 15px;
-}
-
-.background-section {
-  background-image: url(../Multimedia/IMG_3.jpg); /* Ruta de la imagen de fondo */
-  background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el fondo */
-  background-position: 0%; /* Centra la imagen */
-  height: 100vh; /* Altura de la sección con fondo de imagen */
-  width: 100vw;
+  font-size: 18px;
+  padding-bottom: 15px;
 }
 
 img {
   width: 250px;
   height: 300px;
+  justify-self: center;
 }
 
 .grid {
@@ -66,6 +60,6 @@ img {
 
 .flex p {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   font-size: 100px;
 }
