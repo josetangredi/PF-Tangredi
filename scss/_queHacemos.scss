@@ -1,0 +1,43 @@
+.flex__container {
+  display: flex;
+  justify-content: flex-end;
+  div {
+    h1 {
+      font-family: Montserrat, "Open Sans", sans-serif;
+      font-size: 20px;
+      text-align: left;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  }
+  img {
+    width: 550px;
+    height: 400px;
+    padding: 20px;
+  }
+}
+
+h2 {
+  padding: 20px;
+  font-family: Montserrat, "Open Sans", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.imagen {
+  font-family: Montserrat, "Open Sans", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: center; /* Centra las imágenes verticalmente */
+  img {
+    width: 500px; /* Cambia el tamaño según tus necesidades */
+    height: 350px; /* Asegúrate de que las imágenes tengan el mismo tamaño */
+    object-fit: cover; /* Mantiene la proporción de las imágenes */
+    margin: 5px; /* Espacio entre las imágenes */
+    padding: 20px;
+  }
+}
