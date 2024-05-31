@@ -1,0 +1,34 @@
+
+
+.flex__container {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+.imagenes {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  img {
+    width: 250px;
+    height: 300px;
+    margin: 20px;
+  }
+}
+.texto {
+  p {
+    font-family: $font-family_1;
+    font-size: 17px;
+    padding: 10px;
+  }
+}
+.texto2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  p {
+    font-family: $font-family_1;
+    font-size: 16px;
+    margin: 20px;
+  }
+}
