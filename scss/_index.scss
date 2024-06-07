@@ -1,30 +1,17 @@
-h1 {
-  text-align: left;
-}
-
-h2 {
-  text-align: center;
-}
-
-h3 {
-  display: flex;
-  justify-content: left;
-}
-
 // Header
-header {
-  width: 100%;
-  align-items: center;
+.index__header {
+  display: flex;
   justify-content: center;
-}
-
-// Títulos
-.titulo__principal {
-  font-size: 120px;
-  color: $primary-color;
-  text-align: center;
-  font-family: $font-monospace;
-  text-transform: uppercase;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  .titulo__principal {
+    font-size: 150px;
+    color: $primary-color;
+    text-align: center;
+    font-family: $font-monospace;
+    text-transform: uppercase;
+  }
 }
 
 .titulo__secundario {
@@ -37,17 +24,17 @@ header {
 
 // Secciones
 .section {
-  min-height: 100vh;
-  width: 100%;
-  &.section__grey {
-    background-color: #f2f2f0;
-  }
-
+  min-height: 80vh;
+  max-width: 100%;
   &.section__center {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative; /* Añadido para posicionar los elementos hijos relativos a esta sección */
+    &.section__color {
+      background-color: rgba(250, 244, 244, 0.916);
+    }
   }
 }
 
@@ -56,7 +43,6 @@ header {
   display: grid;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: 300px;
-  row-gap: 50px;
   column-gap: 30px;
 }
 

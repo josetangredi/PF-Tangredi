@@ -1,25 +1,13 @@
 @charset "UTF-8";
-h1 {
-  text-align: left;
-}
-
-h2 {
-  text-align: center;
-}
-
-h3 {
+.index__header {
   display: flex;
-  justify-content: left;
-}
-
-header {
-  width: 100%;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
 }
-
-.titulo__principal {
-  font-size: 120px;
+.index__header .titulo__principal {
+  font-size: 150px;
   color: rgb(41, 40, 40);
   text-align: center;
   font-family: monospace;
@@ -35,24 +23,24 @@ header {
 }
 
 .section {
-  min-height: 100vh;
-  width: 100%;
-}
-.section.section__grey {
-  background-color: #f2f2f0;
+  min-height: 80vh;
+  max-width: 100%;
 }
 .section.section__center {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative; /* Añadido para posicionar los elementos hijos relativos a esta sección */
+}
+.section.section__center.section__color {
+  background-color: rgba(250, 244, 244, 0.916);
 }
 
 .grid-container-img {
   display: grid;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: 300px;
-  row-gap: 50px;
   column-gap: 30px;
 }
 
@@ -109,10 +97,11 @@ header h1 {
   text-transform: uppercase;
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  padding-bottom: 20px;
 }
 header .custom-carousel {
   width: 100%;
+  padding-bottom: 20px;
 }
 header #miCarousel .carousel-inner {
   height: 500px; /* Altura del carrusel */
@@ -129,9 +118,13 @@ main {
 main h2 {
   font-family: Montserrat, "Open Sans", sans-serif;
   font-size: 20px;
-  text-align: left;
   text-transform: uppercase;
   padding: 10px;
+  display: flex;
+  justify-content: left;
+}
+main .lote {
+  font-size: 16px;
 }
 main .gallery__container {
   display: flex;
@@ -140,32 +133,43 @@ main .gallery__container {
 }
 main .gallery__container img {
   flex: 1 0 auto;
-  width: 80px;
+  width: 100px;
   height: 250px;
   object-fit: cover;
   margin: 10px;
 }
 
-.flex__container {
-  display: flex;
-  justify-content: flex-end;
-}
-.flex__container div h1 {
-  font-family: Montserrat, "Open Sans", sans-serif;
-  font-size: 20px;
-  text-align: left;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-.flex__container img {
-  width: 550px;
+.imagen__arqui {
+  width: 800px;
   height: 400px;
   padding: 20px;
 }
 
-h2 {
+.flex_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 10px;
+}
+.flex_container .card {
+  border: none;
+}
+.flex_container .card-title {
+  font-family: Montserrat, "Open Sans", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+.flex_container p {
+  display: flex;
+  text-align: center;
+  font-family: Montserrat, "Open Sans", sans-serif;
+}
+
+.titulo {
+  font-size: 20px;
   padding: 20px;
   font-family: Montserrat, "Open Sans", sans-serif;
   text-transform: uppercase;
@@ -188,6 +192,12 @@ h2 {
   padding: 20px;
 }
 
+.titulo {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 0;
+}
+
 .flex__container {
   display: flex;
   align-items: center;
@@ -195,6 +205,7 @@ h2 {
 }
 
 .imagenes {
+  padding-top: 0;
   display: flex;
   flex-direction: column;
   margin-right: 20px;
@@ -222,13 +233,13 @@ h2 {
   margin: 20px;
 }
 
-h1 {
+.title {
   font-family: monospace;
   font-size: 24px; /* Tamaño del título */
   margin: 0; /* Ajuste aquí para eliminar el margen completo alrededor del título */
   display: flex;
   justify-content: center;
-  padding-top: 0; /* Ajuste aquí para reducir o eliminar el espacio superior */
+  padding-top: 20px; /* Ajuste aquí para reducir o eliminar el espacio superior */
 }
 
 .content {
@@ -265,21 +276,26 @@ h1 {
   box-sizing: border-box;
 }
 
-.modern__form button[type=submit] {
-  background-color: #007bff;
-  color: #fff;
+.modern__form input[type=submit],
+.modern__form input[type=reset] {
+  background-color: #000000;
+  color: hsl(0, 0%, 100%);
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  margin: 5px; /* Añade un pequeño margen para separación */
 }
 
-.modern__form button[type=submit]:hover {
-  background-color: #0056b3;
+.modern__form input[type=submit]:hover,
+.modern__form input[type=reset]:hover {
+  background-color: white;
+  color: #000000;
 }
 
-.modern__form button[type=submit]:focus {
+.modern__form input[type=submit]:focus,
+.modern__form input[type=reset]:focus {
   outline: none;
 }
 
@@ -311,20 +327,31 @@ footer a:hover {
 }
 
 /*menu barra navegacion*/
+/* Estilos básicos */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .topbar-wrapper {
   display: flex;
   justify-content: center;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.6666666667);
+  position: relative;
+  align-items: center;
 }
-.topbar-wrapper .menu {
+
+.menu {
   padding: 20px;
   list-style: none;
   display: flex;
   font-family: monospace;
   text-transform: uppercase;
 }
-.topbar-wrapper .menu a {
+
+.menu a {
   padding: 20px;
   margin: 10px;
   color: black;
@@ -332,121 +359,61 @@ footer a:hover {
   font-size: 14px;
   line-height: 0;
 }
-.topbar-wrapper .menu a link {
-  display: inline-block;
+
+/* Responsive Styles */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
 
-/*index*/
-@media screen and (max-width: 600px) {
-  .grid-container-img {
-    grid-template-columns: 2fr;
-    grid-template-rows: 300px 300px;
-    padding: 0 50px;
-  }
-  .item-2 {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .item-4 {
-    grid-column: 1;
-    grid-row: 2;
-  }
+#menu-toggle {
+  display: none;
 }
-/*proyectos*/
-@media screen and (max-width: 768px) {
-  header h1 {
-    font-size: 16px; /* Ajustar el tamaño de fuente del título para pantallas pequeñas */
-  }
-  header .custom-carousel #miCarousel .carousel-inner {
-    height: 200px; /* Ajustar aún más la altura para pantallas muy pequeñas */
-  }
-  main h2 {
-    font-size: 16px; /* Ajustar el tamaño de fuente de los subtítulos para pantallas pequeñas */
-  }
-  main .gallery__container {
-    flex-direction: column; /* Asegura que las imágenes se apilen verticalmente */
-  }
-  main .gallery__container img {
-    width: 100%; /* Hace que las imágenes ocupen todo el ancho disponible */
-    height: auto; /* Mantiene la relación de aspecto de las imágenes */
-  }
-}
-/*que hacemos?*/
+
 @media (max-width: 768px) {
-  .flex__container {
-    flex-direction: column; /* Coloca los elementos en una columna en dispositivos móviles */
-    align-items: center; /* Centra los elementos horizontalmente */
-  }
-  .flex__container div {
-    width: 100%; /* Asegura que el div ocupe toda la pantalla en dispositivos móviles */
-    text-align: center; /* Centra el texto dentro del div */
-  }
-  .flex__container img {
-    width: 90%; /* Ajusta el ancho de la imagen al 90% del contenedor */
-    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
-    padding: 10px; /* Reduce el padding en dispositivos móviles */
-  }
-  .flex__container div h1 {
-    font-size: 18px; /* Ajusta el tamaño de fuente en dispositivos móviles */
-    text-align: center; /* Centra el texto en dispositivos móviles */
-    margin-top: 20px; /* Ajusta el margen superior en dispositivos móviles */
-  }
-  h2 {
-    padding: 15px; /* Ajusta el padding en dispositivos móviles */
-    text-align: center; /* Centra el texto en dispositivos móviles */
-  }
-  .imagen {
-    flex-direction: column; /* Coloca las imágenes en una columna en dispositivos móviles */
-  }
-  .imagen img {
-    width: 90%; /* Ajusta el ancho de la imagen al 90% del contenedor */
-    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
-    padding: 10px; /* Reduce el padding en dispositivos móviles */
-  }
-}
-/*noostras*/
-/* Estilos para dispositivos móviles */
-/* Estilos para dispositivos móviles */
-@media only screen and (max-width: 768px) {
-  .flex__container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .imagenes {
-    margin-right: 0;
-    text-align: center;
-  }
-  .imagenes img {
-    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: auto;
-    margin: 10px 0;
-  }
-  .texto p {
-    font-size: 14px;
-    padding: 5px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .texto2 p {
-    font-size: 14px;
-    margin: 10px;
-    text-align: center;
+  .menu-icon {
+    display: block;
   }
   .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
     text-align: center;
   }
   .menu li {
-    display: inline-block; /* Cambia a mostrar los elementos en línea */
-    margin: 0 10px; /* Añade espacio entre los elementos */
+    display: block;
+    margin: 10px 0;
+  }
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
   }
 }
+/*index*/
 @media screen and (max-width: 600px) {
-  .modern__form {
-    max-width: 200px;
+  .titulo__principal {
+    font-size: 120px;
   }
-  h1 {
-    font-size: 16px; /* Tamaño del título */
-  }
+}
+.grid-container-img {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto; /* Cambiado para que las filas se ajusten automáticamente */
+  row-gap: 30px; /* Agregado espacio entre las imágenes */
+  padding: 0; /* Eliminado el padding horizontal */
+}
+
+.item-2,
+.item-4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+img {
+  width: 300px; /* Ajustado para que la imagen ocupe todo el ancho del contenedor */
 }
 
 /*# sourceMappingURL=styles.css.map */
