@@ -1,10 +1,10 @@
-h1 {
+.title {
   font-family: monospace;
   font-size: 24px; /* Tamaño del título */
   margin: 0; /* Ajuste aquí para eliminar el margen completo alrededor del título */
   display: flex;
   justify-content: center;
-  padding-top: 0; /* Ajuste aquí para reducir o eliminar el espacio superior */
+  padding-top: 20px; /* Ajuste aquí para reducir o eliminar el espacio superior */
 }
 
 .content {
@@ -40,21 +40,25 @@ h1 {
   border-radius: 4px;
   box-sizing: border-box;
 }
-
-.modern__form button[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
+.modern__form input[type="submit"],
+.modern__form input[type="reset"] {
+  background-color: #000000;
+  color: hsl(0, 0%, 100%);
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  margin: 5px; /* Añade un pequeño margen para separación */
 }
 
-.modern__form button[type="submit"]:hover {
-  background-color: #0056b3;
+.modern__form input[type="submit"]:hover,
+.modern__form input[type="reset"]:hover {
+  background-color: white;
+  color: #000000;
 }
 
-.modern__form button[type="submit"]:focus {
+.modern__form input[type="submit"]:focus,
+.modern__form input[type="reset"]:focus {
   outline: none;
 }
