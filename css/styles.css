@@ -23,37 +23,34 @@
 }
 
 .section {
-  min-height: 80vh;
-  max-width: 100%;
+  min-height: 100vh;
+  width: 100%;
+}
+.section.section__grey {
+  background-color: #f2f2f0;
 }
 .section.section__center {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative; /* Añadido para posicionar los elementos hijos relativos a esta sección */
-}
-.section.section__center.section__color {
-  background-color: rgba(250, 244, 244, 0.916);
 }
 
 .grid-container-img {
   display: grid;
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 300px;
-  column-gap: 30px;
+  gap: 30px;
 }
 
-.item-1,
-.item-3 {
+.item-1 {
   grid-column: 1;
   grid-row: 1;
   display: flex;
   justify-content: flex-end;
 }
 
-.item-2,
-.item-4 {
+.item-2 {
   grid-column: 2;
   grid-row: 1;
 }
@@ -99,14 +96,17 @@ header h1 {
   justify-content: center;
   padding-bottom: 20px;
 }
-header .custom-carousel {
+
+.custom-carousel {
   width: 100%;
   padding-bottom: 20px;
 }
-header #miCarousel .carousel-inner {
+
+#miCarousel .carousel-inner {
   height: 500px; /* Altura del carrusel */
 }
-header #miCarousel .carousel-item img {
+
+#miCarousel .carousel-item img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Escala la imagen para cubrir el contenedor */
@@ -394,26 +394,75 @@ body {
 }
 /*index*/
 @media screen and (max-width: 600px) {
-  .titulo__principal {
-    font-size: 120px;
+  .grid-container-img {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; /* Cambiado para que las filas se ajusten automáticamente */
+    row-gap: 30px; /* Agregado espacio entre las imágenes */
+    padding: 0; /* Eliminado el padding horizontal */
+  }
+  .item-2,
+  .item-4 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  img {
+    width: 300px; /* Ajustado para que la imagen ocupe todo el ancho del contenedor */
   }
 }
-.grid-container-img {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto; /* Cambiado para que las filas se ajusten automáticamente */
-  row-gap: 30px; /* Agregado espacio entre las imágenes */
-  padding: 0; /* Eliminado el padding horizontal */
-}
-
-.item-2,
-.item-4 {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-img {
-  width: 300px; /* Ajustado para que la imagen ocupe todo el ancho del contenedor */
+/*proyectos*/ /* CSS para versión móvil */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* Ajuste de padding para móvil */
+  }
+  header h1 {
+    text-align: center;
+    margin-bottom: 10px; /* Espacio debajo del título */
+    padding-top: 20px;
+  }
+  #miCarousel .carousel-inner {
+    height: 200px;
+  }
+  .custom-carousel {
+    padding-bottom: 10px;
+  }
+  main h2 {
+    text-align: center;
+    justify-content: center;
+    font-size: 16px; /* Tamaño de fuente más pequeño en móvil */
+    padding-bottom: 0; /* Reduce el relleno en dispositivos móviles */
+    margin: 10px 0; /* Reduce el margen en dispositivos móviles */
+  }
+  main .lote {
+    margin: 0;
+    font-size: 14px;
+    padding-bottom: 0;
+  }
+  main .gallery__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .gallery__container img {
+    width: 90%; /* Ajusta el ancho de las imágenes para dispositivos móviles */
+    height: auto;
+  }
+  /* Estilos para el menú hamburger */
+  header nav {
+    display: none; /* Oculta el menú de navegación por defecto */
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+  }
+  footer {
+    display: block; /* Asegúrate de que se muestre el footer */
+    width: 100%;
+    background-color: #333; /* Puedes ajustar el fondo a tu gusto */
+    color: #fff; /* Ajusta el color del texto */
+    text-align: center; /* Centra el contenido */
+    padding: 10px 0; /* Ajusta el padding */
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
