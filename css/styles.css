@@ -7,17 +7,17 @@
   width: 100%;
 }
 .index__header .titulo__principal {
-  font-size: 150px;
+  font-size: 100px;
   color: rgb(41, 40, 40);
   text-align: center;
-  font-family: monospace;
+  font-family: Montserrat, "Open Sans", sans-serif;
   text-transform: uppercase;
 }
 
 .titulo__secundario {
   margin: 15px;
   margin-bottom: 50px;
-  font-family: monospace;
+  font-family: Montserrat, "Open Sans", sans-serif;
   font-size: 20px;
   text-transform: uppercase;
 }
@@ -65,7 +65,7 @@ img:hover {
 }
 
 .descripcion__foto {
-  font-family: monospace;
+  font-family: Montserrat, "Open Sans", sans-serif;
   font-size: 15px;
   text-transform: uppercase;
   text-align: center;
@@ -217,6 +217,7 @@ main .gallery__container img {
 }
 
 .texto p {
+  text-align: left;
   font-family: Montserrat, "Open Sans", sans-serif;
   font-size: 17px;
   padding: 10px;
@@ -361,6 +362,7 @@ body {
 }
 
 /* Responsive Styles */
+/*general*/
 .menu-icon {
   display: none;
   font-size: 30px;
@@ -392,8 +394,32 @@ body {
     display: flex;
   }
 }
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+  footer p {
+    margin-bottom: 10px; /* Agrega espacio entre los enlaces */
+    font-size: 16px;
+  }
+}
 /*index*/
 @media screen and (max-width: 600px) {
+  .index__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+  }
+  .index__header .titulo__principal {
+    font-size: 40px;
+    color: #333131;
+  }
+  main {
+    padding-top: -100px;
+  }
   .grid-container-img {
     display: grid;
     grid-template-columns: 1fr;
@@ -410,12 +436,11 @@ body {
     width: 300px; /* Ajustado para que la imagen ocupe todo el ancho del contenedor */
   }
 }
-/*proyectos*/ /* CSS para versión móvil */
+/*proyectos*/
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: center;
-    padding: 10px; /* Ajuste de padding para móvil */
   }
   header h1 {
     text-align: center;
@@ -423,22 +448,16 @@ body {
     padding-top: 20px;
   }
   #miCarousel .carousel-inner {
-    height: 200px;
+    height: 210px;
   }
   .custom-carousel {
     padding-bottom: 10px;
   }
   main h2 {
-    text-align: center;
+    font-size: 16px;
+    display: flex;
     justify-content: center;
-    font-size: 16px; /* Tamaño de fuente más pequeño en móvil */
-    padding-bottom: 0; /* Reduce el relleno en dispositivos móviles */
-    margin: 10px 0; /* Reduce el margen en dispositivos móviles */
-  }
-  main .lote {
     margin: 0;
-    font-size: 14px;
-    padding-bottom: 0;
   }
   main .gallery__container {
     flex-direction: column;
@@ -455,13 +474,72 @@ body {
     width: 100%;
     background-color: #333;
   }
-  footer {
-    display: block; /* Asegúrate de que se muestre el footer */
-    width: 100%;
-    background-color: #333; /* Puedes ajustar el fondo a tu gusto */
-    color: #fff; /* Ajusta el color del texto */
-    text-align: center; /* Centra el contenido */
-    padding: 10px 0; /* Ajusta el padding */
+}
+/*que hacemos?*/
+@media screen and (max-width: 768px) {
+  .flex_container {
+    flex-direction: column; /* Cambia el diseño a columna */
+    align-items: center; /* Centra las imágenes */
+  }
+  .imagen__arqui {
+    max-width: 90%; /* Reducir el máximo ancho para que las imágenes se vean más grandes */
+    padding: 3%; /* Reducir el padding para que las imágenes se vean más grandes */
+  }
+  .imagen__arqui .card-title {
+    font-size: 4vw; /* Ajustar el tamaño de fuente de la tarjeta para dispositivos móviles */
+  }
+  .imagen__arqui p {
+    font-size: 3vw; /* Ajustar el tamaño de fuente del contenido de la tarjeta para dispositivos móviles */
+  }
+  .imagen__arqui .imagen {
+    flex-direction: column; /* Cambia el diseño a columna */
+    align-items: center; /* Centra las imágenes */
+  }
+}
+/*nosotras*/
+@media screen and (max-width: 768px) {
+  .flex__container {
+    flex-direction: column; /* Cambiamos a columna para dispositivos móviles */
+  }
+  .texto {
+    order: -1 !important; /* Cambiamos el orden para que el texto aparezca primero */
+  }
+  .texto p {
+    font-size: 15px;
+  }
+  .imagenes {
+    order: 1; /* Cambiamos el orden para que las imágenes aparezcan después del texto */
+    margin: 10px;
+  }
+}
+/*contacto*/
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 18px; /* Tamaño del título */
+    padding-top: 20px; /* Ajuste aquí para reducir o eliminar el espacio superior */
+    padding-bottom: 0;
+  }
+  .modern__form {
+    width: 80%; /* Reducir el ancho máximo del formulario para dispositivos móviles */
+    margin: 0 auto; /* Centrar el formulario en la pantalla */
+    padding: 10px; /* Añadir un poco de espacio alrededor del formulario */
+  }
+  .form__section input[type=text],
+  .form__section input[type=email],
+  .form__section textarea {
+    width: calc(100% - 20px); /* Utilizar todo el ancho disponible con un pequeño espacio para el borde */
+    font-size: 14px; /* Reducir el tamaño de la fuente de los campos de entrada */
+    padding: 8px; /* Reducir el relleno de los campos de entrada */
+  }
+  .modern__form input[type=submit],
+  .modern__form input[type=reset] {
+    width: calc(50% - 5px); /* Ajustar el ancho del botón para que quepa en la pantalla con un pequeño margen */
+    padding: 8px; /* Reducir el relleno del botón */
+    font-size: 14px; /* Reducir el tamaño de la fuente del botón */
+  }
+  .form__section textarea {
+    height: 100px; /* Reducir la altura de la caja de texto */
   }
 }
 

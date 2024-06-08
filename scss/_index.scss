@@ -6,10 +6,10 @@
   min-height: 100vh;
   width: 100%;
   .titulo__principal {
-    font-size: 150px;
+    font-size: 100px;
     color: $primary-color;
     text-align: center;
-    font-family: $font-monospace;
+    font-family: $font-family_1;
     text-transform: uppercase;
   }
 }
@@ -17,7 +17,7 @@
 .titulo__secundario {
   margin: 15px;
   margin-bottom: 50px;
-  font-family: $font-monospace;
+  font-family: $font-family_1;
   font-size: 20px;
   text-transform: uppercase;
 }
@@ -69,7 +69,7 @@ img:hover {
 
 // Descripciones de fotos
 .descripcion__foto {
-  font-family: $font-monospace;
+  font-family: $font-family_1;
   font-size: 15px;
   text-transform: uppercase;
   text-align: center;
