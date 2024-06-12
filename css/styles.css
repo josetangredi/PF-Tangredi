@@ -380,10 +380,11 @@ footer a:hover {
 
 /* Responsive Styles */
 /*general*/
-.sector__logo {
-  display: flex; /* Mostrar el logo en pantallas pequeñas */
+@media (max-width: 768px) {
+  .sector__logo {
+    display: flex; /* Mostrar el logo en pantallas pequeñas */
+  }
 }
-
 .menu-icon {
   display: none;
   font-size: 30px;
