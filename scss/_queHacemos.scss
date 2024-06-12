@@ -1,16 +1,20 @@
-.imagen__arqui {
-  width: 800px;
-  height: 400px;
-  padding: 20px;
+/* Personaliza el margen entre las imágenes */
+.image-container img {
+  margin-right: 20px; /* Añade un margen derecho entre las imágenes */
+  padding-top: 20px;
 }
-.flex_container {
+
+.flex-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
-  .card {
-    border: none;
-  }
+  padding-top: 50px;
+}
+.card {
+  flex: 1; /* Evita que la tarjeta se estire */
+  max-width: 900px; /* Ajusta el ancho según tus necesidades */
+  padding: 20px; /* Ajusta el padding según tus necesidades */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de la tarjeta */
   .card-title {
     font-family: Montserrat, "Open Sans", sans-serif;
     font-size: 20px;
@@ -25,6 +29,17 @@
     font-family: Montserrat, "Open Sans", sans-serif;
   }
 }
+.image {
+  margin-left: 20px; /* Ajusta el valor según el espacio que necesites */
+}
+
+.sector {
+  display: flex;
+  flex-direction: column; /* Mantén esto para organizar otros elementos si es necesario */
+  align-items: center;
+  box-sizing: border-box;
+}
+
 .titulo {
   font-size: 20px;
   padding: 20px;
@@ -33,17 +48,18 @@
   display: flex;
   justify-content: center;
 }
+
 .imagen {
-  font-family: Montserrat, "Open Sans", sans-serif;
-  text-transform: uppercase;
   display: flex;
-  justify-content: center; /* Centra las imágenes horizontalmente */
-  align-items: center; /* Centra las imágenes verticalmente */
-  img {
-    width: 500px; /* Cambia el tamaño según tus necesidades */
-    height: 350px; /* Asegúrate de que las imágenes tengan el mismo tamaño */
-    object-fit: cover; /* Mantiene la proporción de las imágenes */
-    margin: 5px; /* Espacio entre las imágenes */
-    padding: 20px;
-  }
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; /* Cambia aquí para poner las imágenes una al lado de la otra */
+  flex-wrap: nowrap; /* Evita que las imágenes se envuelvan a la siguiente línea */
+}
+
+.imagen img {
+  width: 400px; /* Ancho fijo */
+  height: 300px; /* Altura fija */
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio asignado sin distorsionarse */
+  margin: 5px; /* Espacio entre las imágenes */
 }

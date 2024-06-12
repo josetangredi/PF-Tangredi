@@ -11,26 +11,23 @@ header {
 }
 .custom-carousel {
   width: 100%;
-  padding-bottom: 20px;
-}
-
-#miCarousel .carousel-inner {
-  height: 500px; /* Altura del carrusel */
+  height: auto; /* Establecer la altura en auto */
+  margin-bottom: 20px; /* Eliminar cualquier margen inferior */
+  padding-bottom: 0; /* Eliminar cualquier relleno inferior */
 }
 
 #miCarousel .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Escala la imagen para cubrir el contenedor */
+  object-fit: cover; /* Escalar la imagen para cubrir el contenedor */
 }
 
 main {
-  padding-top: none;
   h2 {
     font-family: Montserrat, "Open Sans", sans-serif;
-    font-size: 20px;
+    margin: 10px;
+    font-size: 16px;
     text-transform: uppercase;
-    padding: 10px;
     display: flex;
     justify-content: left;
   }

@@ -35,6 +35,12 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    margin: 10px; /* Establece un margen más pequeño en dispositivos móviles */
+  }
+}
+
+@media (max-width: 768px) {
   footer {
     flex-direction: column; /* Apila los elementos verticalmente */
     align-items: center; /* Centra los elementos horizontalmente */
@@ -128,34 +134,32 @@
 }
 
 /*que hacemos?*/
-@media screen and (max-width: 768px) {
-  .flex_container {
-    flex-direction: column; /* Cambia el diseño a columna */
-    align-items: center; /* Centra las imágenes */
+@media only screen and (max-width: 768px) {
+  .contenedor {
+    padding-top: 55px;
   }
-  .imagen__arqui {
-    max-width: 90%; /* Reducir el máximo ancho para que las imágenes se vean más grandes */
-    padding: 3%; /* Reducir el padding para que las imágenes se vean más grandes */
-    .card-title {
-      font-size: 4vw; /* Ajustar el tamaño de fuente de la tarjeta para dispositivos móviles */
-    }
-
-    p {
-      font-size: 3vw; /* Ajustar el tamaño de fuente del contenido de la tarjeta para dispositivos móviles */
-    }
+  .flex-container {
+    flex-direction: column; /* Cambia el diseño de las tarjetas a una columna */
+  }
+  .card {
+    width: 100%; /* Tarjetas ocupan todo el ancho */
+    margin-bottom: 20px; /* Espacio entre tarjetas */
+  }
+  .image {
+    max-width: 100%; /* La imagen se ajustará al contenedor */
+    height: auto; /* Para mantener la proporción */
+    margin: 10px; /* Ajusta el margen entre las imágenes */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortarla */
   }
   .imagen {
-    display: flex;
-    flex-direction: column;
-
+    flex-direction: column; /* Cambia el diseño de las imágenes a una columna */
+    align-items: center; /* Centra las imágenes horizontalmente */
     img {
-      margin-bottom: 0;
+      max-width: 100%; /* La imagen se ajustará al contenedor */
+      height: auto; /* Para mantener la proporción */
+      margin: 10px auto; /* Centra las imágenes horizontalmente y añade espacio vertical entre ellas */
+      object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortarla */
     }
-  }
-  .titulo {
-    position: static; /* Restaura la posición del título */
-    transform: none; /* Restaura la transformación */
-    margin-top: 10px; /* Espacio entre el título y las imágenes */
   }
 }
 
@@ -181,7 +185,7 @@
 @media screen and (max-width: 768px) {
   .title {
     font-size: 18px; /* Tamaño del título */
-    padding-top: 20px; /* Ajuste aquí para reducir o eliminar el espacio superior */
+    padding-top: 60px; /* Ajuste aquí para reducir o eliminar el espacio superior */
     padding-bottom: 0;
   }
 
